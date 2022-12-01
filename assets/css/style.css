@@ -88,6 +88,11 @@ svg {
     gap: 1rem;
     align-items: center;
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    cursor: pointer;
+}
+.sidebar_logo:hover {
+    filter: drop-shadow(2px 2px 1px rgb(255 255 255 / 0.6))
+            drop-shadow(1px 1px 1px rgb(255 255 255 / 0.4));
 }
 
 
