@@ -9,6 +9,11 @@
  *    theOdinProject.com     *
 \* * * * * * * * * * * * * * */
 
+/******************\
+ * imported fonts *
+\******************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 /*************\
  * CSS Reset *
 \*************/
@@ -38,13 +43,33 @@ button {
  * Root element *
 \****************/
 :root {
+    /* colors */
     --primary-clr: #0f172a;
     --secondary-clr: #1e293b; /*#27293D */
     --primary-text-clr: #e2e8f0;
     --secondary-text-clr: #9ca3af; /* #6c757d */
 
+    /* typography */
+    --font-family-sans-serif: 'Roboto', sans-serif;
+    --font-thin: 100,
+    --font-light: 300,
+    --font-regular: 400,
+    --font-medium: 500,
+    --font-bold: 700,
+
 }
 
+
+/**********\
+ * Base CSS *
+\**********/
+
+body {
+    background-color: var(--primary-clr);
+    color: var(--primary-text-clr);
+    min-height: 100vh;
+    font-family: var(--font-family-sans-serif);
+}
 
 
 /**********\
@@ -59,14 +84,4 @@ button {
 .sidebar,
 .footer {
     border: 1px solid var(--primary-text-clr);
-}
-
-
-
-/**********\
- * Base CSS *
-\**********/
-
-body {
-    background-color: var(--primary-clr);
 }
