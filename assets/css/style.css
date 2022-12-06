@@ -12,3 +12,32 @@
 /*************\
  * CSS Reset *
 \*************/
+
+
+
+
+:root {
+    --primary-clr: #0f172a;
+    --secondary-clr: #1e293b; /*#27293D */
+    --primary-text-clr: #e2e8f0;
+    --secondary-text-clr: #9ca3af; /* #6c757d */
+
+}
+
+
+
+/**********\
+ * Layout *
+\**********/
+.container {
+    display: grid;
+}
+
+
+/**********\
+ * Base CSS *
+\**********/
+
+body {
+    background-color: var(--primary-clr);
+}
