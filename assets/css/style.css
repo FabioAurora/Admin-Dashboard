@@ -48,7 +48,7 @@ a {
     --primary-clr: #0f172a;
     --secondary-clr: #1e293b; /*#27293D */
     --primary-text-clr: #e2e8f0;
-    --secondary-text-clr: #9ca3af; /* #6c757d */
+    --secondary-text-clr: rgb(207, 207, 207);; /* #6c757d */
     --searchbox-legacy-border-shadow-color: hsla(0, 0%, 0%, 0);
     --rainbow-gradient: linear-gradient(-90deg,#adfbda 0,#35c3ff 30%,#fda399 50%,#76d880 70%,#ebf38b 90%,#adfbda 100%);
 
@@ -57,11 +57,21 @@ a {
 
     /* typography */
     --font-family-sans-serif: 'Roboto', sans-serif;
-    --font-thin: 100,
-    --font-light: 300,
-    --font-regular: 400,
-    --font-medium: 500,
-    --font-bold: 700,
+    --font-thin: 100;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+
+    /* margin/padding/gap */
+    --gap-0-5: .5rem;
+    --gap-0-8: .8rem;
+    --gap-1: 1rem;
+    --gap-1-5: 1.5rem;
+    --gap-3: 3rem;
+
+    --padding-ctn: 1.5rem 0 1.5rem 1rem;
+    --padding-1: 1rem;
 
 }
 
@@ -75,6 +85,7 @@ body {
     color: var(--primary-text-clr);
     min-height: 100vh;
     font-family: var(--font-family-sans-serif);
+    line-height: 1.5;
 }
 
 a {
@@ -100,7 +111,7 @@ button {
     grid-template-rows: 80px  repeat(4, 1fr) 100px;
     min-height: 100vh;
     padding-left: 1rem;
-    gap: .8rem;
+    gap: var(--gap-1-5);
 }
  
 .main,
@@ -134,7 +145,6 @@ button {
     background-color: #0093E9;
     background-image: linear-gradient(110deg, #0093E9 0%, #76d880 100%);
     border-radius: .4rem;
-    margin-right: 1.1rem;
 }
 
 /* Custom CSS */
@@ -152,12 +162,11 @@ button {
 .logo {
    display: flex;
    align-items: center;
-   gap: .5rem;
+   gap: var(--gap-0-5);
    background: var(--rainbow-gradient);
    -webkit-text-fill-color: transparent;
    -webkit-background-clip: text;
    background-clip: text;
-   font-weight: 700;
    text-transform: uppercase;
    font-size: 1.2rem;
    cursor: pointer;
@@ -179,7 +188,7 @@ button {
     box-shadow: 0 0 17px 3px #76d880,0 0 4px 2px #76d880;
     z-index: -1;
     animation: yellow-shadow 3s infinite ease;
-  border-radius: 5px;
+    border-radius: 5px;
 }
 .logo_container:after {
     content: '';
@@ -193,6 +202,10 @@ button {
     z-index: -1;
     animation: cyan-shadow 3s infinite ease;
     border-radius: 5px;
+}
+
+.logo_title {
+    font-weight: var(--font-bold);
 }
 
 .logo_icon {
@@ -268,7 +281,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1.5rem;
+    gap: var(--gap-1-5);
 }
 .header_options svg {
     cursor: pointer;
@@ -332,15 +345,15 @@ button {
 \**********/
 
 .sidebar_nav{
-    padding: 1.5rem 0 0 1rem;
+    padding: var(--padding-ctn);
     display: grid;
-    gap: 3rem;
+    gap: var(--gap-3);
 }
 
 .sidebar_link {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: var(--gap-1);
     margin-bottom: 1rem;
     font-size: 1.175rem;
     filter: drop-shadow(2px 2px 2px rgba(0 0 0 / .6));
@@ -358,6 +371,43 @@ button {
 /********************\
  * Trending Sidebar *
 \******1*************/
+.trending_ctn {
+    grid-column: 1 / 3;
+    grid-row: 4 / 7;
+    display: flex;
+    gap: var(--gap-0-5);
+    flex-direction: column;
+}
+.trending_ctn-title {
+    align-self: flex-start;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1-5);
+    padding: var(--padding-ctn);
+    background-color: var(--secondary-clr);
+    border-radius: .4rem;
+}
+.trending_posts {
+    display: flex;
+    gap: var(--gap-0-8);
+}
+
+
+.bold_para {
+    font-weight: var(--font-medium);
+    margin-bottom: .2rem;
+    letter-spacing: 1px;
+}
+
+.thin_para {
+    font-weight: var(--font-thin);
+    font-size: .8rem;
+    color: var(--secondary-text-clr);
+    word-spacing: 2px;
+}
 
 
 
