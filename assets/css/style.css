@@ -293,12 +293,16 @@ button {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    background-color: #35c3ff;
+    background-color: #fff;
 }
 
 .profile_img-ctn > img {
     position: absolute;
     top: -10px;
+}
+
+.profile_img-ctn > .profile_img {
+    top: 3px;
 }
 
 .caret_ctn {
