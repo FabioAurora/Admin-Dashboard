@@ -397,8 +397,8 @@ button {
 .trending_posts {
     display: flex;
     gap: var(--gap-0-8);
+    cursor: pointer;
 }
-
 
 .bold_para {
     font-weight: var(--font-medium);
@@ -407,7 +407,7 @@ button {
 }
 
 .thin_para {
-    font-weight: var(--font-thin);
+    font-weight: var(--font-light);
     font-size: .8rem;
     color: var(--secondary-text-clr);
     word-spacing: 2px;
