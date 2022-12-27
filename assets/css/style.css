@@ -478,7 +478,7 @@ button {
     border-radius: var(--b-radius-0-4);
     max-width: 650px;
     box-shadow: .2rem .2rem .2rem rgb(0 0 0 / 30%);
-    margin-bottom: .5rem;
+    margin-bottom: .8rem;
 }
 
 .card_para {
