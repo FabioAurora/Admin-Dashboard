@@ -49,6 +49,7 @@ a {
     --secondary-clr: #1e293b; /*#27293D */
     --primary-text-clr: #e2e8f0;
     --secondary-text-clr: rgb(207, 207, 207);; /* #6c757d */
+    --LIGHT-BLUE: #35c3ff;
     --searchBox-legacy-border-shadow-color: hsla(0, 0%, 0%, 0);
     --rainbow-gradient: linear-gradient(-90deg,#adfbda 0,#35c3ff 30%,#fda399 50%,#76d880 70%,#ebf38b 90%,#adfbda 100%);
     --card-before-bg: linear-gradient(0deg,#adfbda 0,#35c3ff 30%,#fda399 70%,#76d880 90%);
@@ -91,6 +92,7 @@ body {
     min-height: 100vh;
     font-family: var(--font-family-sans-serif);
     line-height: 1.5;
+    font-size: 1em;
 }
 
 a {
@@ -134,7 +136,7 @@ h1,h2 {
 .main {
     grid-row: 2 / 6;
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1fr;
+    grid-template-columns: repeat(3, 1fr) 250px;
     padding: var(--padding-1-2) var(--padding-1);
     gap: var(--gap-1);
 }
@@ -148,6 +150,9 @@ h1,h2 {
     background-color: #0093E9;
     background-image: linear-gradient(110deg, #0093E9 0%, #76d880 100%);
     border-radius: .4rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: start;
 }
 
 .main,
@@ -396,6 +401,9 @@ h1,h2 {
 /********************\
  * Trending Sidebar *
 \******1*************/
+.my_signature {
+    justify-self: center;
+}
 .trending_ctn {
     grid-column: 1 / 3;
     grid-row: 4 / 7;
@@ -452,14 +460,16 @@ h1,h2 {
     grid-column: 1 / 4;
 }
 
-.projects h2 {
+.projects  h2,
+.main_aside-section > h2 {
     margin-bottom: .8rem;
 }
 
 .project_cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--gap-1-5);
+    column-gap: var(--gap-1-5);
+    row-gap: var(--gap-1);
 }
 
 .card {
@@ -520,23 +530,43 @@ h1,h2 {
     gap: 2rem;
 }
 
-.exercise_ctn {
+.aside_content-ctn {
     background-color: var(--secondary-clr);
     border-radius: var(--b-radius-0-4);
     padding: var(--padding-1-2) var(--padding-1);
 }
 
-.exercise h2 {
-    font-size: 1.25rem;
+.aside_content {
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--primary-clr);
+}.aside_content:last-child,
+ .aside_content:hover:last-child {
+    border-bottom: none;
+}.aside_content:hover {
+    border-bottom: 1px solid rgb(118 216 128 / .6);
+    transition: all .3s;
 }
 
-.exercise p {
-    font-size: small;
+
+.exercise__link-title {
+    color: var(--LIGHT-BLUE);
+    font-size: 1.12rem;
 }
 
+.exercise__description {
+    font-size: .8rem;
+}
 
-
-
+.aside_courses {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-0-8);
+    color: #76d880;
+    padding: 1rem 0;
+}.aside_courses > i {
+    font-size: 1.35rem;
+}
 
 
 @keyframes yellow-shadow {
