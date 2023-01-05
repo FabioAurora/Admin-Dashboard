@@ -17,3 +17,10 @@ document.addEventListener('click', function(event) {
         searchIcon.removeAttribute('style', 'display: inline-flex');
     };
   });
+
+
+  /* get date for footer */
+const date = document.querySelector('#date');
+const currentYear = new Date().getFullYear();
+
+date.textContent = currentYear
