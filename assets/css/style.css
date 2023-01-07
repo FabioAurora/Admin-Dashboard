@@ -603,7 +603,7 @@ input {
 
 }
 
-@media screen and (width <= 47rem) {
+@media screen and (max-width: 47rem) {
     .logo_container {
         grid-column: auto;
         width: 30px;
