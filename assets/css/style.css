@@ -112,12 +112,16 @@ h1,h2 {
     letter-spacing: 1px;
 }
 
+input {
+    color: inherit;
+}
+
 /**********\
  * Layout *
 \**********/
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 120px) repeat(10, 1fr);
+    grid-template-columns: repeat(2, auto) repeat(10, 1fr);
     grid-template-rows: 80px  repeat(4, 1fr) 100px;
     min-height: 100vh;
     padding-left: 1rem;
@@ -577,7 +581,7 @@ h1,h2 {
 \*****************/
 @media screen and (width <= 83rem){
     .main {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-column: 1 / -1;
     }
 
@@ -589,9 +593,12 @@ h1,h2 {
         align-self: center;
     }
     .sidebar,
-    .trending_ctn,
-    .main_aside {
+    .trending_ctn{
         display: none;
+    }
+
+    .main_aside {
+        grid-column: auto;
     }
 
 }
@@ -599,16 +606,11 @@ h1,h2 {
 @media screen and (width <= 47rem) {
     .logo_container {
         grid-column: auto;
-        width: 40px;
-        border: 1px solid;
+        width: 30px;
    }
-    .logo_container:before {
-        width: 40%;
-        height: 40%;
-    }
-    .logo_container:after {
-        width: 50%;
-        height: 50%;
+    .logo_container:before,
+    .logo_container:after  {
+        display: none;
     }
     .logo {
         gap: 0;
@@ -621,11 +623,8 @@ h1,h2 {
     }
 
     .header_options {
-        grid-column: 10 / -1;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: var(--gap-0-5);
+        grid-column: 9 / -1;
+        gap: var(--gap-0-8);
     }
     .card > img {
         align-self: auto;
@@ -636,8 +635,27 @@ h1,h2 {
     }
 
     .form_container {
-        grid-column: 2/ 9;
+        grid-column: 2/ 8;
         margin-left: 0;
+    }
+
+    .form_search-box {
+        margin-left: 12px;
+    }
+    
+    .search_icon {
+        visibility: hidden;
+    }
+    
+    .search_box-btn {
+        width: 2.5rem;
+        color: var(--primary-text-clr);
+    }
+    .search_box-btn > svg {
+        width: 24px;
+    }
+    .form_search-box > input {
+        border: none;
     }
 }
 
